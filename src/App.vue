@@ -19,6 +19,9 @@
       <div class="text-center">
         <LoyaltyProgramMainView :userId="this.userId"/>
       </div>
+      <div class="flex-row">
+        <ProductsList></ProductsList>
+      </div>
 
     </Content>
     <!--<Footer>content footer</Footer>-->
@@ -33,6 +36,7 @@ import CloseButton from "./components/CloseButton";
 import Content from "./components/Content";
 import Button from "./components/Button";
 import LoyaltyProgramMainView from "./components/LoyaltyProgramStore/LoyaltyProgramMainView.vue";
+import ProductsList from "./components/LoyaltyProgramStore/ProductsList.vue";
 // import SurveyCard from "./components/SurveyCard";
 // import Shimmer from "./components/Shimmer";
 // import Spinner from "./components/Spinner";
@@ -41,6 +45,7 @@ import LoyaltyProgramMainView from "./components/LoyaltyProgramStore/LoyaltyProg
 export default {
   name: "App",
   components: {
+    ProductsList,
     LoyaltyProgramMainView,
     // SurveyCard,
     // Shimmer,
