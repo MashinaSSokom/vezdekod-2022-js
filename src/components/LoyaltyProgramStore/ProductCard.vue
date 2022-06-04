@@ -14,16 +14,16 @@
       <div class="line-clamp-1 font-semibold">{{ productName }}</div>
       <div class="line-clamp-4 text-sm">{{ productDesc }}</div>
       <div class="line-clamp-4 text-sm">{{ productPrice }}</div>
-      <button class="text-center px-4 py-2 rounded-md transition-all shadow-md ring-2
+      <button class="w-24 h-10  rounded-md transition-all
                      font-semibold text-white bg-orange-500 ring-orange-500 active:bg-orange-400 active:ring-orange-400"
               v-b-modal="`qr-${this.userId}-${this.productId}`"
               @click="generateQr"
       >
 
-        <b-modal :id="`qr-${this.userId}-${this.productId}`" title="BootstrapVue">
-          <QrcodeVue :value="qrValue" :size="300"/>
+        <b-modal :id="`qr-${this.userId}-${this.productId}`" title="BootstrapVue" class="text-center" hide-footer>
+          <QrcodeVue :value="qrValue" :size="150" class="flex justify-center"/>
         </b-modal>
-          Показать QR
+          Купить
       </button>
 <!--      <template v-if="showQr">-->
 <!--        <QrcodeVue :value="qrValue" :size="300"/>-->
