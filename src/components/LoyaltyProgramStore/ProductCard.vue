@@ -65,7 +65,7 @@ export default {
   },
   methods: {
     generateQr() {
-      this.qrValue = `${this.userId} ${this.productId}`
+      this.qrValue = JSON.stringify({userid: this.userId, productId: this.productId})
       this.showQr = !this.showQr
     }
   }
