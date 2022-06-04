@@ -17,7 +17,7 @@
         {{ this.barcode.result }}
       </div>
       <div class="text-center">
-        <LoyaltyProgramMainView/>
+        <LoyaltyProgramMainView :userId="this.userId"/>
       </div>
 
     </Content>
@@ -52,12 +52,16 @@ export default {
     CloseButton,
     Button,
   },
+  beforeMount() {
+    this.userId = Date.now()
+  },
   data() {
     return {
       barcode: "",
       // modal: {
       //   show: false,
       // },
+      userId: null,
       spinner: true,
     };
   },

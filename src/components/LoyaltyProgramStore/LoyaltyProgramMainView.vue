@@ -9,7 +9,6 @@
     <button class="text-center px-4 py-2 rounded-md transition-all shadow-md ring-2
     font-semibold text-white bg-orange-500 ring-orange-500 active:bg-orange-400 active:ring-orange-400"
             @click="setBonusValue"
-
     >
       Добавить
     </button>
@@ -24,6 +23,11 @@ export default {
       bonusValue: 0,
       bonusInputValue: 0,
     };
+  },
+  props: {
+    userId: {
+      type: Number
+    },
   },
   methods: {
     setBonusValue() {
