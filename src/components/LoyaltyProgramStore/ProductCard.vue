@@ -16,18 +16,18 @@
       <div class="line-clamp-4 text-sm">{{ productPrice }}</div>
       <button class="text-center px-4 py-2 rounded-md transition-all shadow-md ring-2
                      font-semibold text-white bg-orange-500 ring-orange-500 active:bg-orange-400 active:ring-orange-400"
+              v-b-modal="`qr-${this.userId}-${this.productId}`"
               @click="generateQr"
       >
-        <template v-if="showQr">
-          Скрыть QR
-        </template>
-        <template v-else>
+
+        <b-modal :id="`qr-${this.userId}-${this.productId}`" title="BootstrapVue">
+          <QrcodeVue :value="qrValue" :size="300"/>
+        </b-modal>
           Показать QR
-        </template>
       </button>
-      <template v-if="showQr">
-        <QrcodeVue :value="qrValue" :size="300"/>
-      </template>
+<!--      <template v-if="showQr">-->
+<!--        <QrcodeVue :value="qrValue" :size="300"/>-->
+<!--      </template>-->
     </div>
   </div>
 </template>
@@ -47,6 +47,12 @@ export default {
     }
   },
   props: {
+    userId: {
+      type: Number
+    },
+    productId: {
+      type: Number
+    },
     productName: {
       type: String
     },

@@ -5,6 +5,8 @@
                    :product-desc="product.description"
                    :product-price="product.price"
                    :key="product.id"
+                   :user-id="userId"
+                   :product-id="product.id"
       />
     </template>
   </div>
@@ -22,6 +24,11 @@ export default {
         {id: 2, name: 'Product 2', description: 'Product 1 desc', price: 200},
         {id: 3, name: 'Product 3', description: 'Product 1 desc', price: 300}
       ]
+    }
+  },
+  props: {
+    userId: {
+      type: Number
     }
   }
 }

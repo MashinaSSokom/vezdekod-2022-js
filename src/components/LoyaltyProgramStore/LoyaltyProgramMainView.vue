@@ -12,33 +12,33 @@
     >
       Добавить
     </button>
-    <div class="qr text-center flex flex-col items-center">
-      <button class="text-center px-4 py-2 rounded-md transition-all shadow-md ring-2
-    font-semibold text-white bg-orange-500 ring-orange-500 active:bg-orange-400 active:ring-orange-400"
-              @click="generateQr"
-      >
-        <template v-if="showQr">
-          Скрыть QR
-        </template>
-        <template v-else>
-          Показать QR
-        </template>
-      </button>
-      <template v-if="showQr">
-        <p>QR</p>
-        <QrcodeVue :value="qrValue" :size="qrSize"/>
-      </template>
-    </div>
+<!--    <div class="qr text-center flex flex-col items-center">-->
+<!--      <button class="text-center px-4 py-2 rounded-md transition-all shadow-md ring-2-->
+<!--    font-semibold text-white bg-orange-500 ring-orange-500 active:bg-orange-400 active:ring-orange-400"-->
+<!--              @click="generateQr"-->
+<!--      >-->
+<!--        <template v-if="showQr">-->
+<!--          Скрыть QR-->
+<!--        </template>-->
+<!--        <template v-else>-->
+<!--          Показать QR-->
+<!--        </template>-->
+<!--      </button>-->
+<!--      <template v-if="showQr">-->
+<!--        <p>QR</p>-->
+<!--        <QrcodeVue :value="qrValue" :size="qrSize"/>-->
+<!--      </template>-->
+<!--    </div>-->
   </div>
 </template>
 
 <script>
-import QrcodeVue from 'qrcode.vue'
+// import QrcodeVue from 'qrcode.vue'
 
 export default {
   name: "LoyaltyProgramMainView",
   components: {
-    QrcodeVue
+    // QrcodeVue
   },
   data() {
     return {

@@ -20,7 +20,7 @@
         <LoyaltyProgramMainView :userId="this.userId"/>
       </div>
       <div class="flex-row">
-        <ProductsList></ProductsList>
+        <ProductsList :user-id="this.userId"></ProductsList>
       </div>
 
     </Content>
