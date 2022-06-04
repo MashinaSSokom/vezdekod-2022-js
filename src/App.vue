@@ -17,7 +17,7 @@
         {{ this.barcode.result }}
       </div>
       <div class="text-center">
-        <BonusProducts/>
+        <LoyaltyProgramMainView/>
       </div>
 
     </Content>
@@ -32,7 +32,7 @@ import Header from "./components/Header";
 import CloseButton from "./components/CloseButton";
 import Content from "./components/Content";
 import Button from "./components/Button";
-import BonusProducts from "./components/BonustStore/BonusProducts.vue";
+import LoyaltyProgramMainView from "./components/LoyaltyProgramStore/LoyaltyProgramMainView.vue";
 // import SurveyCard from "./components/SurveyCard";
 // import Shimmer from "./components/Shimmer";
 // import Spinner from "./components/Spinner";
@@ -41,7 +41,7 @@ import BonusProducts from "./components/BonustStore/BonusProducts.vue";
 export default {
   name: "App",
   components: {
-    BonusProducts,
+    LoyaltyProgramMainView,
     // SurveyCard,
     // Shimmer,
     // Spinner,

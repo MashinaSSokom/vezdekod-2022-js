@@ -18,7 +18,7 @@
 
 <script>
 export default {
-  name: "BonusProducts",
+  name: "LoyaltyProgramMainView",
   data() {
     return {
       bonusValue: 0,
