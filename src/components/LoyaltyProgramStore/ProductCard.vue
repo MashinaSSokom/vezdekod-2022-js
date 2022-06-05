@@ -18,6 +18,7 @@
                      font-semibold text-white bg-orange-500 ring-orange-500 active:bg-orange-400 active:ring-orange-400"
               v-b-modal="`qr-${this.userId}-${this.productId}`"
               @click="generateQr"
+              @close="closing"
       >
 
         <b-modal :id="`qr-${this.userId}-${this.productId}`" title="BootstrapVue" class="text-center" hide-footer>
@@ -67,6 +68,9 @@ export default {
     generateQr() {
       this.qrValue = JSON.stringify({userid: this.userId, productId: this.productId})
       this.showQr = !this.showQr
+    },
+    closing() {
+
     }
   }
 }
